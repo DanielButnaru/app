@@ -1,0 +1,48 @@
+.topFixedPage {
+  background-image: url("../../assets/images/about/about-bg-5.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 400px;
+  width: 100%;
+  .topPageOverlay {
+    position: absolute;
+    min-height: 400px;
+    width: 100%;
+    background: rgb(0, 0, 0, 0.5);
+
+    .topPageContent {
+      position: relative;
+      min-height: 400px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .topPageTitle {
+        color: #fff;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: clamp(2rem, 5vw, 4rem);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 89.6px; /* 140% */
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    min-height: 300px;
+    .topPageOverlay {
+      min-height: 300px;
+      .topPageContent {
+        min-height: 300px;
+        .topPageTitle { 
+          line-height: 47.6px; 
+        }
+      }
+    }
+  }
+}

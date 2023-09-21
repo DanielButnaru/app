@@ -1,0 +1,49 @@
+@import '../partials';
+
+.navTitle {
+}
+.navTitleScroll {
+  color: blue !important;
+}
+
+.navBackground {
+  -webkit-transition: background-color 0.5s ease-in-out  !important;
+  -moz-transition: background-color 0.5s ease-in-out  !important;
+  -o-transition: background-color 0.5s ease-in-out  !important;
+  transition: background-color 0.5s ease-in-out  !important;
+  background-color: transparent !important;
+  .navTitle {
+  }
+
+  .navItem {
+    color: $white-light !important;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600 !important;
+    line-height: 70px;
+    transition: all 0.5s ease-in-out !important;
+
+    &:hover {
+      color: $pink !important;
+    }
+  }
+}
+.navBackgroundScroll {
+  -webkit-transition: background-color 0.5s ease-in-out !important;
+  -moz-transition: background-color 0.5s ease-in-out  !important;
+  -o-transition: background-color 0.5s ease-in-out  !important;
+  background-color:#e7ecef !important;
+
+  .navItemScroll {
+    color: Black;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600 !important;
+    line-height: 70px;
+    transition: all 0.5s ease-in-out !important;
+
+    &:hover {
+      color: $pink !important;
+    }
+  }
+}

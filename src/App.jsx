@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import "./scss/style.scss";
+import "./assets/scss/style.scss";
 import { HomePage } from "./pages/HomePage";
 import { PagesTop } from "./components/PagesTop/PagesTop";
 import TopNavigation from "./components/TopNavigation/TopNavigation";

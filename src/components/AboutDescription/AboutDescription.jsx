@@ -1,28 +1,65 @@
-import React, { Component } from 'react'
-import { Fragment } from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
+import React, { Component } from "react";
+import { Fragment } from "react";
+import { Col, Container, Row } from "react-bootstrap";
+import aboutImg from "../../assets/images/about/outdoor-image-02-768x513.jpg";
 
 export class AboutDescription extends Component {
   render() {
     return (
-     <Fragment>
-        <Container>
-            <Row>
-                <Col lg={12} md={12} sm={12}>
-                    <h1 className="serviceName">Who I am</h1>
-                    <hr/>
-                    <p className="serviceDescription">I am a web designer and developer based in Dhaka, Bangladesh. I have a passion for web design and love to create for web and mobile devices.</p>
-                    <p className="serviceDescription">I have been working in this field for 4 years, and have loved every minute of it. I specialize in creating beautiful, usable, and professional websites using best practice accessibility and the latest W3C web standards guidelines, resulting in semantic and seo friendly HTML and CSS. All my websites are lovingly hand coded.</p>
-                    <p className="serviceDescription">For building websites my weapons of choice are Photoshop and Fireworks for creating layouts, then Coda to produce clean semantic XHTML and CSS. I code to XHTML strict 1. I also use Flash for animations and sometimes full Flash sites. My CMS of choice are Expression Engine and Wordpress. I also use Flash for animations and sometimes full Flash sites. My CMS of choice are Expression Engine and Wordpress.</p>
-                    <p className="serviceDescription">I am currently available for freelance work. If you would like to hire me, please <a href="#">contact me</a>.</p>
+      <Fragment>
+        <Container className="py-5">
+          <Row className="my-5">
+            <Col lg={6} md={6} sm={12}>
+              <h1 className="headingTitle">OUR MISSION</h1>
+              <div className="borderBottom "></div>
+              <p className="serviceDescription">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+                voluptatum, quibusdam, quos, voluptate voluptas quia
+                exercitationem quae voluptatibus quod doloribus quas
+                necessitatibus. Quisquam, voluptates.</p>
+                <p className="serviceDescription">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+                voluptatum, quibusdam, quos, voluptate voluptas quia
+                exercitationem quae voluptatibus quod doloribus quas</p>
+            </Col>
+            <Col lg={6} md={6} sm={12}>
+              <img className="aboutImg" src={aboutImg} alt="" />
+              
+              </Col>
+          </Row>
+          <Row className="my-5">
+            <Col lg={6} md={6} sm={12}>
+              <h4 className="subHeadingTitle mt-2">OUR VISION</h4>
+              <div className="borderBottom "></div>
+              <p className="serviceDescription">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+                voluptatum, quibusdam, quos, voluptate voluptas quia
+                exercitationem quae voluptatibus quod doloribus quas
+                necessitatibus. Quisquam, voluptates.</p>
+                <p className="serviceDescription">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+                voluptatum, quibusdam, quos, voluptate voluptas quia
+                exercitationem quae voluptatibus quod doloribus quas</p>
+            </Col>
+            <Col lg={6} md={6} sm={12}>
+              <h4 className="subHeadingTitle mt-2">OUR PLAN</h4>
+              <div className="borderBottom "></div>
+              <p className="serviceDescription">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+                voluptatum, quibusdam, quos, voluptate voluptas quia
+                exercitationem quae voluptatibus quod doloribus quas
+                necessitatibus. Quisquam, voluptates.</p>
+                <p className="serviceDescription">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+                voluptatum, quibusdam, quos, voluptate voluptas quia
+                exercitationem quae voluptatibus quod doloribus quas</p>
+            </Col>
+          </Row>
 
-                    
-                    </Col>
-                </Row>
         </Container>
-     </Fragment>
-    )
+      </Fragment>
+    );
   }
 }
 
-export default AboutDescription
+export default AboutDescription;

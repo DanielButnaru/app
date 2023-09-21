@@ -10,8 +10,7 @@ export class PagesTop extends Component {
             <Container className="topPageContent">
               <Row>
                 <Col className="text-center">
-                  <h4>{this.props.pageTitle}</h4>
-                  <p>egrgf</p>
+                  <h4 className="topPageTitle">{this.props.pageTitle}</h4>
                 </Col>
               </Row>
             </Container>
