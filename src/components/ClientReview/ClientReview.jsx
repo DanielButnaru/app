@@ -3,8 +3,23 @@ import { Container, Row, Col } from "react-bootstrap";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import RestClient from "../../RestAPI/RestClient";
+import AppUrl from "../../RestAPI/AppUrl";
 
 export class ClientReview extends Component {
+  constructor() {
+    super();
+    this.state = {
+      myData: [],
+    };
+  }
+
+  componentDidMount() {
+    RestClient.GetRequest(AppUrl.ClientReview).then((result) => {
+      this.setState({ myData: result });
+    });
+  }
+
   render() {
     var settings = {
       autoplay: true,
@@ -46,34 +61,27 @@ export class ClientReview extends Component {
       ],
     };
 
+    const MyList = this.state.myData;
+    const MyView = MyList.map((MyList) => {
+      return (
+        <div>
+          <Row className="text-center justify-content-center">
+            <Col lg={6} md={6} sm={12}>
+              <img className="circleImg" src={MyList.client_image} />
+              <h1 className="serviceName">{MyList.client_name}</h1>
+              <p className="serviceDescription">{MyList.client_review}</p>
+            </Col>
+          </Row>
+        </div>
+      );
+    });
+
     return (
       <Fragment>
         <Container fluid={true} className="siderBack">
           <h1 className="serviceMainTitle text-center">Client Says</h1>
           <div className="bottom"></div>
-          <Slider {...settings}>
-            <div>
-            <Row className="text-center justify-content-center">
-              <Col lg={6} md={6} sm={12}>
-                <h1>Client 1</h1>
-              </Col>
-            </Row>
-            </div>
-            <div>
-            <Row className="text-center justify-content-center">
-              <Col lg={6} md={6} sm={12}>
-                <h1>Client 2</h1>
-              </Col>
-            </Row>
-            </div>
-            <div>
-            <Row className="text-center justify-content-center">
-              <Col lg={6} md={6} sm={12}>
-                <h1>Client 3</h1>
-              </Col>
-            </Row>
-            </div>
-          </Slider>
+          <Slider {...settings}>{MyView}</Slider>
         </Container>
       </Fragment>
     );
