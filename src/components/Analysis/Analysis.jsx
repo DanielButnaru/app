@@ -9,7 +9,7 @@ export class Analysis extends Component {
       data: [
         { Technology: "Java", Projects: 100 },
         { Technology: "Python", Projects: 80 },
-        { Technology: "PHP", Projects: 70 },
+        { Technology: "Londra", Projects: 70 },
         { Technology: "Javascript", Projects: 60 },
         { Technology: "C#", Projects: 50 },
         { Technology: "C++", Projects: 40 },
@@ -19,11 +19,11 @@ export class Analysis extends Component {
   }
 
   render() {
-    var blue = "#8884d8";
+    var blue = "#fb2056";
     return (
       <Fragment>
         <Container className="text-center">
-          <h1 className="serviceMainTitle">Technology Used</h1>
+          <h1 className="serviceMainTitle">The most sought after trips</h1>
           <div className="bottom"></div>
           <Row>
             <Col style={{ width: "100%", height: "300px" }} lg={6} md={12} sm={12} >

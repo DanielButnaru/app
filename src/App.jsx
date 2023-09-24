@@ -1,15 +1,20 @@
 import { useState } from "react";
 import "./App.css";
 import "./assets/scss/style.scss";
-import { HomePage } from "./pages/HomePage";
-import { PagesTop } from "./components/PagesTop/PagesTop";
-import TopNavigation from "./components/TopNavigation/TopNavigation";
-import AboutPage from "./pages/AboutPage";
+import AppRouter from "./router/AppRouter";
+import { BrowserRouter} from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import ServicesPage from "./pages/ServicesPage";
+import ProjectPage from "./pages/ProjectPage";
+import ContactPage from "./pages/ContactPage";
 
 function App() {
   return (
     <>
-     <AboutPage/>
+      <BrowserRouter>
+        <AppRouter />
+       
+      </BrowserRouter>
     </>
   );
 }

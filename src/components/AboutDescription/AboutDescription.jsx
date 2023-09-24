@@ -12,12 +12,12 @@ export class AboutDescription extends Component {
             <Col lg={6} md={6} sm={12}>
               <h1 className="headingTitle">OUR MISSION</h1>
               <div className="borderBottom "></div>
-              <p className="serviceDescription">
+              <p className="paragraph">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
                 voluptatum, quibusdam, quos, voluptate voluptas quia
                 exercitationem quae voluptatibus quod doloribus quas
                 necessitatibus. Quisquam, voluptates.</p>
-                <p className="serviceDescription">
+                <p className="paragraph">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
                 voluptatum, quibusdam, quos, voluptate voluptas quia
                 exercitationem quae voluptatibus quod doloribus quas</p>
@@ -31,12 +31,12 @@ export class AboutDescription extends Component {
             <Col lg={6} md={6} sm={12}>
               <h4 className="subHeadingTitle mt-2">OUR VISION</h4>
               <div className="borderBottom "></div>
-              <p className="serviceDescription">
+              <p className="paragraph">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
                 voluptatum, quibusdam, quos, voluptate voluptas quia
                 exercitationem quae voluptatibus quod doloribus quas
                 necessitatibus. Quisquam, voluptates.</p>
-                <p className="serviceDescription">
+                <p className="paragraph">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
                 voluptatum, quibusdam, quos, voluptate voluptas quia
                 exercitationem quae voluptatibus quod doloribus quas</p>
@@ -44,12 +44,12 @@ export class AboutDescription extends Component {
             <Col lg={6} md={6} sm={12}>
               <h4 className="subHeadingTitle mt-2">OUR PLAN</h4>
               <div className="borderBottom "></div>
-              <p className="serviceDescription">
+              <p className="paragraph">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
                 voluptatum, quibusdam, quos, voluptate voluptas quia
                 exercitationem quae voluptatibus quod doloribus quas
                 necessitatibus. Quisquam, voluptates.</p>
-                <p className="serviceDescription">
+                <p className="paragraph">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
                 voluptatum, quibusdam, quos, voluptate voluptas quia
                 exercitationem quae voluptatibus quod doloribus quas</p>

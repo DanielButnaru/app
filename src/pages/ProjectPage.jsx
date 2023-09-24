@@ -2,23 +2,23 @@ import React, { Component } from 'react'
 import { Fragment } from 'react'
 import TopNavigation from '../components/TopNavigation/TopNavigation'
 import PageTop from '../components/PagesTop/PagesTop'
-import AboutDescription from '../components/AboutDescription/AboutDescription'
+import ProjectsDescription from '../components/ProjectsDescription/ProjectsDescription'
 import Footer from '../components/Footer/Footer'
 
-export class AboutPage extends Component {
+export class ProjectPage extends Component {
   componentDidMount(){
     window.scroll(0,0)
   }
   render() {
     return (
      <Fragment>
-        <TopNavigation title="About Us"/>
-        <PageTop pageTitle="About Us"/>
-        <AboutDescription/>
+        <TopNavigation title="Our Projects"/>
+        <PageTop pageTitle="Our Projects"/>
+        <ProjectsDescription/>
         <Footer/>
         </Fragment>
     )
   }
 }
 
-export default AboutPage
+export default ProjectPage

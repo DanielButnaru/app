@@ -1,50 +1,65 @@
 import React, { Component, Fragment } from "react";
 import { Col, Container, Row, Card, Button } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import walkingHolidays from "../../assets/images/hero/walking-v1.jpg";
+import hiking from "../../assets/images/hero/hiking-v1.jpg";
+import snow from "../../assets/images/hero/snow-1.jpg";
 
 export class RecentProject extends Component {
   render() {
     return (
       <Fragment>
-        <Container>
-          <Row>
-            <Col lg={4} md={6} sm={12}>
-              <Card style={{ width: "18rem" }}>
-                <Card.Img variant="top" src="holder.js/100px180" />
-                <Card.Body>
-                  <Card.Title>Project one</Card.Title>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </Card.Text>
-                  <Button variant="primary">Go somewhere</Button>
-                </Card.Body>
-              </Card>
+        <Container className="my-5">
+          <h2 className="headingTitle fixed-center">Upcoming Events</h2>
+          <Row className="my-5">
+            <Col lg={4} md={6} sm={12} className="my-4  p-3">
+              <div className="eventsCard">
+                <img src={walkingHolidays} alt="Walking Holidays" />
+                <div className="eventsCardBody text-center mt-4">
+                  <h2 className="eventsCardTitle">Walking Holidays</h2>
+                  <p className="eventsCardDescription">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Nulla vitae aliquam odio. Nullam eget massa nec ex
+                    ullamcorper aliquet. Nulla facilisi. Nulla facilisi.
+                  </p>
+                  <Button className="eventsCardButton" variant="primary">
+                    Learn More <FontAwesomeIcon icon={faArrowRight} />
+                  </Button>
+                </div>
+              </div>
             </Col>
-            <Col lg={4} md={6} sm={12}>
-              <Card style={{ width: "18rem" }}>
-                <Card.Img variant="top" src="holder.js/100px180" />
-                <Card.Body>
-                  <Card.Title>Project two</Card.Title>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </Card.Text>
-                  <Button variant="primary">Go somewhere</Button>
-                </Card.Body>
-              </Card>
+            <Col lg={4} md={6} sm={12}  className="my-4 p-3">
+              <div className="eventsCard">
+                <img src={hiking} alt="Walking Holidays" />
+                <div className="eventsCardBody text-center mt-4">
+                  <h2 className="eventsCardTitle">Walking Holidays</h2>
+                  <p className="eventsCardDescription">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Nulla vitae aliquam odio. Nullam eget massa nec ex
+                    ullamcorper aliquet. Nulla facilisi. Nulla facilisi.
+                  </p>
+                  <Button className="eventsCardButton" variant="primary">
+                    Learn More <FontAwesomeIcon icon={faArrowRight} />
+                  </Button>
+                </div>
+              </div>
             </Col>
-            <Col lg={4} md={6} sm={12}>
-              <Card style={{ width: "18rem" }}>
-                <Card.Img variant="top" src="holder.js/100px180" />
-                <Card.Body>
-                  <Card.Title>Project three</Card.Title>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </Card.Text>
-                  <Button variant="primary">Go somewhere</Button>
-                </Card.Body>
-              </Card>
+            <Col lg={4} md={6} sm={12}  className="my-4  p-3">
+              <div className="eventsCard">
+                <img src={snow} alt="Walking Holidays" />
+                <div className="eventsCardBody text-center mt-4">
+                  <h2 className="eventsCardTitle">Walking Holidays</h2>
+                  <p className="eventsCardDescription">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Nulla vitae aliquam odio. Nullam eget massa nec ex
+                    ullamcorper aliquet. Nulla facilisi. Nulla facilisi.
+                  </p>
+                  <Button className="eventsCardButton" variant="primary">
+                    Learn More <FontAwesomeIcon icon={faArrowRight} />
+                  </Button>
+                </div>
+              </div>
             </Col>
           </Row>
         </Container>

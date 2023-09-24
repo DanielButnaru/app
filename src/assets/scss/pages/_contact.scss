@@ -1,0 +1,66 @@
+.contactTitle {
+  color: #191919;
+  font-family: Montserrat;
+  font-size: clamp(30px, 2.5vw, 40px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 47.6px;
+  text-transform: uppercase;
+}
+
+.subHeadingContactTitle {
+  color: #191919;
+  font-family: Montserrat;
+  font-size: clamp(16px, 2.5vw, 20px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 21.6px;
+}
+
+.socialLink {
+  padding: 0;
+  li {
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    background-color: #fb2056;
+    border-radius: 50%;
+    padding: 10px;
+    margin-right: 10px;
+    a {
+      display: flex;
+      width: 16px;
+      height: 16px;
+      padding: 0px 3px;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
+
+    &:hover {
+      background-color: #000000;
+    }
+  }
+}
+
+.contactButton{
+    display: flex;
+    background-color: #fb2056 !important;
+    border-radius: 10px;
+    margin: 15px auto;
+    padding: 10px 20px;
+    color: #fff;
+    font-family: Montserrat;
+    font-size: clamp(16px, 2.5vw, 20px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21.6px;
+    text-transform: uppercase;
+    border: none;
+    align-items: center;
+    cursor: pointer;
+    &:hover{
+        scale: 1.1;
+    }
+}
+

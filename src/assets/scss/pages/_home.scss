@@ -1,2 +1,190 @@
+.topFixedBanner {
+  background-image: url("../../assets/images/hero/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  .topBannerOverlay {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background: rgb(0, 0, 0, 0.5);
+    .topContent {
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .topTitle {
+        color: #fff;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: clamp(20px, 5vw, 40px);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 89.6px;
+        text-transform: uppercase;
+      }
+      .topSubTitle {
+        color: #fff;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: clamp(20px, 5vw, 26px);
+        font-style: normal;
+        font-weight: 600;
+        line-height: 89.6px;
+        text-transform: uppercase;
+      }
 
+      .heroButton {
+        background-color: #fb2056;
+        border: none;
+        border-radius: 30px;
+        padding: 10px 20px;
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+        &:hover {
+          background-color: #fff;
+          color: #fb2056;
+          scale: 1.1;
+        }
+      }
+    }
+  }
+}
 
+// Events upcoming
+
+.eventsCard {
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 10px 10px 0px 1px rgba(0, 0, 0, 0.07);
+    filter: blur(0.5px);
+  }
+
+  .eventsCardBody {
+    .eventsCardTitle {
+      font-family: Montserrat;
+      font-size: clamp(18px, 5vw, 24px);
+      font-style: normal;
+      font-weight: 700;
+    }
+    .eventsCardDescription {
+      font-family: Noto Sans;
+      font-size: clamp(14px, 5vw, 16px);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 27.2px;
+      display: flex;
+      align-items: center;
+    }
+
+    .eventsCardButton {
+      background-color: #fb2056;
+      border: none;
+      border-radius: 30px;
+      padding: 7px 14px;
+      color: #fff;
+      font-family: Montserrat;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.5s ease-in-out;
+      &:hover {
+        scale: 1.03;
+      }
+    }
+  }
+}
+
+// summary
+
+.summaryBanner {
+  background-image: url("../../assets/images/hero/section-bg-img.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 60vh;
+  width: 100%;
+  padding: 0 !important;
+  position: relative;
+
+  .summaryBannerOverlay {
+    height: 60vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.681);
+    height: 60vh;
+    width: 100%;
+    .summaryBannerContent {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+
+      .countSection {
+        svg {
+            margin: 5px 0;
+          color: #fff;
+          font-size: clamp(1.5rem, 5vw, 3.5rem);
+        }
+        h1 {
+          font-family: Montserrat;
+          font-size: clamp(1.6rem, 5vw, 2.5rem);
+          font-style: normal;
+          font-weight: 700;
+          line-height: 47.6px;
+
+          color: #fff;
+        }
+
+        h4 {
+          font-family: Montserrat;
+          font-size: clamp(1rem, 2vw, 1.5rem);
+          font-style: normal;
+          font-weight: 700;
+          line-height: 24px;
+          color: #fb2056;
+        }
+      }
+    }
+  }
+  .card {
+    .card-title {
+      font-family: Montserrat;
+      font-size: clamp(18px, 5vw, 24px);
+      font-style: normal;
+      font-weight: 700;
+      line-height: 27.2px;
+      color: #fb2056;
+    }
+    margin: 0 auto;
+  }
+
+  p {
+    font-family: Noto Sans;
+    font-size: clamp(14px, 5vw, 16px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27.2px;
+    margin: 4px 0;
+    svg {
+      margin: 0 5px;
+      color: #fb2056;
+    }
+  }
+}

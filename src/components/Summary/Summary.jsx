@@ -4,8 +4,8 @@ import { Col, Container, Row, Card } from "react-bootstrap";
 import {
   faCheckSquare,
   faGlobe,
-  faLaptop,
   faStar,
+  faFlag,
 } from "@fortawesome/free-solid-svg-icons";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
@@ -14,16 +14,16 @@ export class Summary extends Component {
   render() {
     return (
       <Fragment>
-        <Container fluid={true} className="summaryBanner summarySection p-0">
+        <Container fluid={true} className="summaryBanner summarySection my-5">
           <div className="summaryBannerOverlay">
-            <Container className="text-center">
+            <Container className="summaryBannerContent text-center">
               <Row>
                 <Col lg={8} md={6} sm={12}>
                   <Row className="countSection">
                     <Col>
                       <FontAwesomeIcon icon={faGlobe} />
                       <h1>
-                        <CountUp start={0} end={100} duration={5} >
+                        <CountUp start={0} end={106} duration={5} >
                           {({ countUpRef, start }) => (
                             <VisibilitySensor onChange={start} delayedCall>
                               <span ref={countUpRef} />
@@ -31,13 +31,12 @@ export class Summary extends Component {
                           )}
                         </CountUp>
                       </h1>
-                      <h4>Students Worldwide</h4>
-                      <hr className="bg-black w-25" />
+                      <h4>Travels Around The World</h4>
                     </Col>
                     <Col>
-                      <FontAwesomeIcon icon={faLaptop} />
+                      <FontAwesomeIcon icon={faFlag} />
                       <h1>
-                        <CountUp start={0} end={22} duration={5}>
+                        <CountUp start={0} end={47} duration={5}>
                           {({ countUpRef, start }) => (
                             <VisibilitySensor onChange={start} delayedCall>
                               <span ref={countUpRef} />
@@ -45,8 +44,7 @@ export class Summary extends Component {
                           )}
                         </CountUp>
                       </h1>
-                      <h4>Courses Published</h4>
-                      <hr className="bg-black w-25" />
+                      <h4>Countries Visited</h4>
                     </Col>
                     <Col>
                       <FontAwesomeIcon icon={faStar} />
@@ -58,10 +56,8 @@ export class Summary extends Component {
                             </VisibilitySensor>
                           )}
                         </CountUp>
-                        
                       </h1>
-                      <h4>Students Review</h4>
-                      <hr className="bg-black w-25" />
+                      <h4>Happy Customers</h4>
                     </Col>
                   </Row>
                 </Col>

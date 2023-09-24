@@ -1,44 +1,3 @@
-.headingTitle {
-  color: #191919;
-  font-family: Montserrat;
-  font-size: clamp(1.6rem, 5vw, 3rem);
-  font-style: normal;
-  font-weight: 700;
-  line-height: 47.6px;
-  text-transform: uppercase;
-  &::after{
-    content: "";
-    display: block;
-    width: 50px;
-    height: 3px;
-    background-color: #FB2056;
-    margin: 10px 0;
-  }
-}
-.subHeadingTitle {
-  color: #191919;
-  font-family: Montserrat;
-  font-size: clamp(1.2rem, 2vw, 1.7rem);
-  font-style: normal;
-  font-weight: 700;
-  line-height: 24px; 
-  &::after{
-    content: "";
-    display: block;
-    width: 50px;
-    height: 3px;
-    background-color: #FB2056;
-    margin: 10px 0;
-  }
-}
-.serviceDescription {
-  color: #404040;
-  font-family: Noto Sans;
-  font-size: clamp(1rem, 2vw, 1.5rem);
-  font-style: normal;
-  font-weight: 500;
-  line-height: 27.2px; 
-}
 
 .aboutImg {
   width: 100%;
@@ -48,13 +7,4 @@
     border-radius: 10px;
 }
 
-@media screen and (max-width: 768px) {
-    .headingTitle, .subHeadingTitle {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .serviceDescription {
-        text-align: center;
-    }
-}
+
