@@ -23,26 +23,30 @@ export class Video extends Component {
   render() {
     return (
       <Fragment>
-        <Container className="text-center">
-          <h1 className="serviceMainTitle">Our Videos</h1>
-          <div className="bottom"></div>
+        <Container fluid={true} className="bg-light videoBanner py-4">
+        <Container className="text-center videoBannerOverlay ">
+          <h1 className="headingTitle fixed-center my-5">Our Videos</h1>
 
-          <Row>
+          <Row  className="my-3">
             <Col lg={6} md={6} sm={12}>
-              <p className="courseDes">
+              <h2 className="headingSubtitle py-5">Lorem Ipsum</h2>
+              <p className="paragraph">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Quisquam voluptatum, quibusdam, quia, quos voluptates
                 voluptatibus voluptatem quod quas doloribus quidem voluptate.
               </p>
             </Col>
             <Col lg={6} md={6} sm={12}>
+              <div className="videoCard">
               <FontAwesomeIcon
                 onClick={this.modalShow}
                 className="iconBullet"
                 icon={faVideoSlash}
               />
+              </div>
             </Col>
           </Row>
+        </Container>
         </Container>
 
         <Modal show={this.state.show} onHide={this.modalClose}>

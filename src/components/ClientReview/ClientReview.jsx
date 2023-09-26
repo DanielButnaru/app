@@ -66,10 +66,10 @@ export class ClientReview extends Component {
       return (
         <div>
           <Row className="text-center justify-content-center">
-            <Col lg={6} md={6} sm={12}>
+            <Col lg={6} md={6} sm={12} className="review-section">
               <img className="circleImg" src={MyList.client_image} />
-              <h1 className="serviceName">{MyList.client_name}</h1>
-              <p className="serviceDescription">{MyList.client_review}</p>
+              <h1 className="customerName">{MyList.client_name}</h1>
+              <p className="customerReview">{MyList.client_review}</p>
             </Col>
           </Row>
         </div>
@@ -78,9 +78,8 @@ export class ClientReview extends Component {
 
     return (
       <Fragment>
-        <Container fluid={true} className="siderBack">
-          <h1 className="serviceMainTitle text-center">Client Says</h1>
-          <div className="bottom"></div>
+        <Container fluid={true} className="testimonialBanner">
+          <h1 className="serviceMainTitle text-center">Testimonial</h1>
           <Slider {...settings}>{MyView}</Slider>
         </Container>
       </Fragment>

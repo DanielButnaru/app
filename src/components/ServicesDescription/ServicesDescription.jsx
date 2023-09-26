@@ -7,9 +7,46 @@ import WaterSports from "../../assets/images/services/services-3.jpg";
 import WinterSports from "../../assets/images/services/outdoor-image-01.jpg";
 import { faMinus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import RestClient from "../../RestAPI/RestClient";
+import AppUrl from "../../RestAPI/AppUrl";
 
 export class ServicesDescription extends Component {
+
+  constructor() {
+    super();
+    this.state = {
+      myData: [],
+    };
+  }
+
+  componentDidMount() {
+    RestClient.GetRequest(AppUrl.ServicesAll).then((result) => {
+      this.setState({ myData: result });
+    });
+  }
+  
+
   render() {
+
+    const MyList = this.state.myData;
+    const MyView = MyList.map((MyList) => {
+      return(
+
+        <Col lg={6} md={12} sm={12} className="pt-3">
+        <div className="serviceCard text-center">
+          <img src={MyList.service_logo} alt="" className="serviceImg" />
+          <h2 className="serviceName mt-5 ">{MyList.service_name}</h2>
+          <p className="paragraph mt-4 ">
+            {MyList.service_description}
+          </p>
+        </div>
+      </Col>
+      )
+    })
+  
+
+
+
     return (
       <Fragment>
         <Container className="py-5">
@@ -25,32 +62,10 @@ export class ServicesDescription extends Component {
           </p>
 
           <Row className="my-5">
-            <Col lg={6} md={12} sm={12} className="pt-3">
-              <div className="serviceCard text-center">
-                <img src={BackpackingTrips} alt="" className="serviceImg" />
-                <h2 className="serviceName mt-5 ">Backpacking Trips</h2>
-                <p className="paragraph mt-4 ">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
-                  voluptatum, quibusdam, quos, voluptate voluptas quia
-                  exercitationem quae voluptatibus quod doloribus quas
-                  necessitatibus. Quisquam, voluptates.
-                </p>
-              </div>
-            </Col>
-            <Col lg={6} md={12} sm={12} className="pt-3">
-              <div className="serviceCard text-center">
-                <img src={FamilyHikingTrips} alt="" className="serviceImg" />
-                <h2 className="serviceName mt-5 ">Family Hiking Trips</h2>
-                <p className="paragraph mt-4 ">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
-                  voluptatum, quibusdam, quos, voluptate voluptas quia
-                  exercitationem quae voluptatibus quod doloribus quas
-                  necessitatibus. Quisquam, voluptates.
-                </p>
-              </div>
-            </Col>
+            {MyView}
+          
           </Row>
-          <Row className="my-5">
+          {/* <Row className="my-5">
             <Col lg={6} md={12} sm={12} className="pt-3">
               <div className="serviceCard text-center">
                 <img src={WaterSports} alt="" className="serviceImg" />
@@ -75,7 +90,7 @@ export class ServicesDescription extends Component {
                 </p>
               </div>
             </Col>
-          </Row>
+          </Row> */}
         </Container>
         <Container fluid={true} className="bg-light py-5">
           <Container>

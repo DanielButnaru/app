@@ -5,6 +5,8 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import walkingHolidays from "../../assets/images/hero/walking-v1.jpg";
 import hiking from "../../assets/images/hero/hiking-v1.jpg";
 import snow from "../../assets/images/hero/snow-1.jpg";
+import { Link } from "react-router-dom";
+
 
 export class RecentProject extends Component {
   render() {

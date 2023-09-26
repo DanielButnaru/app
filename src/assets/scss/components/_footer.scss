@@ -1,0 +1,52 @@
+.footerSection{
+    .footerTitle{
+        font-size: clamp(20px, 5vh, 30px);
+        font-weight: 600;
+        color: $white;
+        margin-bottom: 1rem;
+    }
+    .footerSubSection{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+        justify-content: center;
+
+        a{
+            text-decoration: none;
+            color: $white;
+            font-size: clamp(16px, 5vh, 20px);
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+            &:hover {
+                
+            }
+        }
+    }
+}
+
+.ityped-cursor {
+    font-size: 2.2rem;
+    opacity: 1;
+    -webkit-animation: blink 0.3s infinite;
+    -moz-animation: blink 0.3s infinite;
+    animation: blink 0.3s infinite;
+    animation-direction: alternate;
+}
+ 
+@keyframes blink {
+    100% {
+        opacity: 0;
+    }
+}
+ 
+@-webkit-keyframes blink {
+    100% {
+        opacity: 0;
+    }
+}
+ 
+@-moz-keyframes blink {
+    100% {
+        opacity: 0;
+    }
+}

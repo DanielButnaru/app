@@ -5,8 +5,39 @@ import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import AppUrl from "../../RestAPI/AppUrl";
+import RestClient from "../../RestAPI/RestClient";
 
 export class ContactDescription extends Component {
+
+  constructor() {
+    super();
+    this.state = {
+      name: "",
+      email: "",
+      message: ""
+    };
+  }
+
+
+
+
+
+
+  sendContact = () => {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
+    let jsonObject = { name:name, email:email, message:message };
+
+    RestClient.PostRequest(AppUrl.ContactSend,JSON.stringify(jsonObject)).then(result=>{
+      alert(result);
+    }).catch(error=>{
+      alert("Error");
+    })
+  }
+
+
   render() {
     return (
       <Fragment>
@@ -17,17 +48,17 @@ export class ContactDescription extends Component {
               <Form>
                 <Form.Group controlId="formBasicEmail">
                   <Form.Label className="paragraph">Your Name</Form.Label>
-                  <Form.Control type="text" placeholder="Enter Your Name" />
+                  <Form.Control id="name" type="text" placeholder="Enter Your Name" />
                 </Form.Group>
                 <Form.Group controlId="formBasicEmail">
                   <Form.Label className="paragraph">Your Email</Form.Label>
-                  <Form.Control type="email" placeholder="Enter Your Email" />
+                  <Form.Control id="email" type="email" placeholder="Enter Your Email" />
                 </Form.Group>
                 <Form.Group controlId="formBasicEmail">
                   <Form.Label className="paragraph">Your Message</Form.Label>
-                  <Form.Control as="textarea" rows={3} />
+                  <Form.Control id="message" as="textarea" rows={3} />
                 </Form.Group>
-                <button className="contactButton">Submit</button>
+                <button onClick={this.sendContact} className="contactButton">Submit</button>
               </Form>
             </Col>
             <Col lg={6} md={6} sm={12} className="ps-5">

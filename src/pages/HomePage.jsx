@@ -5,7 +5,7 @@ import { TopNavigation } from "../components/TopNavigation/TopNavigation";
 import { Analysis } from "../components/Analysis/Analysis";
 import { Summary } from "../components/Summary/Summary";
 import { RecentProject } from "../components/RecentProject/RecentProject";
-import { Courses } from "../components/Courses/Courses";
+import { Projects } from "../components/Projects/Projects";
 import { Video } from "../components/Video/Video";
 import { ClientReview } from "../components/ClientReview/ClientReview";
 import { AboutMe } from "../components/AboutMe/AboutMe";
@@ -25,10 +25,9 @@ export class HomePage extends Component {
         {/* <Services /> */}
         {/* <Analysis /> */}
         <Summary />
-        <Courses />
+        <Projects />
         <Video />
         <ClientReview />
-        <AboutMe />
         <Footer />
       </Fragment>
     );
