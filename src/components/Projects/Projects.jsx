@@ -5,22 +5,33 @@ import AppUrl from "../../RestAPI/AppUrl";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import Loading from "../Loading/Loading";
 
 export class Projects extends Component {
   constructor() {
     super();
     this.state = {
       myData: [],
+      loading: true,
+
+
     };
   }
 
   componentDidMount() {
     RestClient.GetRequest(AppUrl.ProjectLatest).then((result) => {
-      this.setState({ myData: result });
+      this.setState({ myData: result, loading: false });
     });
   }
 
   render() {
+
+    if(this.state.loading==true){
+      return <Loading />
+    }else{
+
+
+
     const MyList = this.state.myData;
     const MyView = MyList.map((MyList) => {
       return (
@@ -46,6 +57,7 @@ export class Projects extends Component {
         </Container>
       </Fragment>
     );
+    } //end else
   }
 }
 

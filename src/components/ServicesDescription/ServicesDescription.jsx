@@ -9,6 +9,7 @@ import { faMinus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import RestClient from "../../RestAPI/RestClient";
 import AppUrl from "../../RestAPI/AppUrl";
+import Loading from "../Loading/Loading";
 
 export class ServicesDescription extends Component {
 
@@ -16,17 +17,22 @@ export class ServicesDescription extends Component {
     super();
     this.state = {
       myData: [],
+      loading: true,
     };
   }
 
   componentDidMount() {
     RestClient.GetRequest(AppUrl.ServicesAll).then((result) => {
-      this.setState({ myData: result });
+      this.setState({ myData: result, loading: false });
     });
   }
   
 
   render() {
+
+    if(this.state.loading==true){
+      return <Loading />
+    }else{
 
     const MyList = this.state.myData;
     const MyView = MyList.map((MyList) => {
@@ -140,6 +146,7 @@ export class ServicesDescription extends Component {
           </Container>
       </Fragment>
     );
+    } //end else
   }
 }
 

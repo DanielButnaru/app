@@ -13,7 +13,7 @@ class AppUrl {
     // project part
     static ProjectAll = this.BaseUrl + '/projectall';
     static ProjectLatest = this.BaseUrl + '/projecthome';
-    static ProjectDetails = this.BaseUrl + '/projectdetails';
+    static ProjectDetails = this.BaseUrl + '/projectdetails/';
 
 
     //  Services part

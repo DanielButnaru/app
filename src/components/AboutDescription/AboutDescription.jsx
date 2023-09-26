@@ -2,9 +2,31 @@ import React, { Component } from "react";
 import { Fragment } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import aboutImg from "../../assets/images/about/outdoor-image-02-768x513.jpg";
+import RestClient from "../../RestAPI/RestClient";
+import AppUrl from "../../RestAPI/AppUrl";
+import Loading from "../Loading/Loading";
+
+
 
 export class AboutDescription extends Component {
+  constructor() {
+    super();
+    this.state = {
+      myData: [],
+      loading: true,
+    };
+  }
+  componentDidMount() {
+    RestClient.GetRequest(AppUrl.AboutData).then((result) => {
+      this.setState({ myData: result, loading: false });
+    });
+  }
+
   render() {
+
+    if(this.state.loading==true){
+      return <Loading />
+    }else{
     return (
       <Fragment>
         <Container className="py-5">
@@ -59,6 +81,7 @@ export class AboutDescription extends Component {
         </Container>
       </Fragment>
     );
+    } //end else
   }
 }
 

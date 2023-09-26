@@ -7,6 +7,8 @@ import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import AppUrl from "../../RestAPI/AppUrl";
 import RestClient from "../../RestAPI/RestClient";
+import Loading from "../Loading/Loading";
+import WentWrong from "../../components/WentWrong/WentWrong";
 
 export class ContactDescription extends Component {
 
@@ -15,7 +17,9 @@ export class ContactDescription extends Component {
     this.state = {
       name: "",
       email: "",
-      message: ""
+      message: "",
+      loading: true,
+      error:false,
     };
   }
 
@@ -31,14 +35,28 @@ export class ContactDescription extends Component {
     let jsonObject = { name:name, email:email, message:message };
 
     RestClient.PostRequest(AppUrl.ContactSend,JSON.stringify(jsonObject)).then(result=>{
-      alert(result);
+
+      if(result==null){
+        this.setState({error:true})
+      }else{
+     this.setState({
+      name:result[0]['name'],
+      email:result[0]['email'],
+      message:result[0]['message'],
+      loading:false
+
+     })
+    }
     }).catch(error=>{
-      alert("Error");
+      this.setState({error:true})
     })
   }
 
 
   render() {
+    if(this.state.loading==true){
+      return <Loading />
+    }else if (this.state.loading==false){
     return (
       <Fragment>
         <Container className="my-5 py-4">
@@ -102,6 +120,9 @@ export class ContactDescription extends Component {
         </Container>
       </Fragment>
     );
+    } else if(this.state.error == true){
+      return <WentWrong/>
+    }
   }
 }
 
