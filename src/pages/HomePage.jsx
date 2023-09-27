@@ -21,8 +21,9 @@ export class HomePage extends Component {
      
         <TopNavigation title="Home" />
         <TopBanner />
+        <Services />
         <RecentProject />
-        {/* <Services /> */}
+       
         {/* <Analysis /> */}
         <Summary />
         <Projects />
