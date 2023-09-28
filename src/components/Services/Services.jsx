@@ -99,7 +99,7 @@ export class Services extends Component {
               </Col>
 
             </Row>
-            <Row   className="my-3">
+            <Row className="my-3">
               <Col lg={6} >
                 <div className="servicesCard text-center">
                   <img src={Visibility} alt="logo" className="servicesLogo" />
