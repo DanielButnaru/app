@@ -1,11 +1,11 @@
 import React, { Component, Fragment } from "react";
 import { Col, Container, Row, Button } from "react-bootstrap";
-import RestClient from "../../RestAPI/RestClient";
-import AppUrl from "../../RestAPI/AppUrl";
+import RestClient from "../../../RestAPI/RestClient";
+import AppUrl from "../../../RestAPI/AppUrl";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import Loading from "../Loading/Loading";
+import Loading from "../../Loading/Loading";
 
 export class Projects extends Component {
   constructor() {

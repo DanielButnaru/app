@@ -3,8 +3,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import RestClient from "../../RestAPI/RestClient";
-import AppUrl from "../../RestAPI/AppUrl";
+import RestClient from "../../../RestAPI/RestClient";
+import AppUrl from "../../../RestAPI/AppUrl";
 
 export class ClientReview extends Component {
   constructor() {

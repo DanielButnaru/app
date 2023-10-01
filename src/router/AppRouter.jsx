@@ -7,6 +7,8 @@ import ContactPage from "../pages/ContactPage";
 import AboutPage from "../pages/AboutPage";
 import ProjectDetailPage from "../pages/ProjectDetailPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import FeaturesPage from "../pages/FeaturesPage";
+import BlogPage from "../pages/BlogPage";
 
 export class AppRouter extends Component {
   render() {
@@ -18,6 +20,8 @@ export class AppRouter extends Component {
           <Route exact path="/services" element={<ServicesPage />} />
           <Route exact path="/projects" element={<ProjectPage />} />
           <Route exact path="/contact" element={<ContactPage />} />
+          <Route exact path="/features" element={<FeaturesPage />} />
+          <Route exact path="/blog" element={<BlogPage />} />
           <Route
             exact
             path="/projectdetails/:projectId"

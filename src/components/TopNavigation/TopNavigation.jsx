@@ -80,20 +80,19 @@ export class TopNavigation extends Component {
                     exact
                     activeStyle={{ color: "#fb2056" }}
                     className={this.state.navBarItem}
-                    to="/services"
+                    to="/features"
                   >
-                    Services
+                    Features
                   </Link>
                 </Nav.Link>
                 <Nav.Link>
-                  {" "}
                   <Link
                     exact
                     activeStyle={{ color: "#fb2056" }}
                     className={this.state.navBarItem}
-                    to="/projects"
+                    to="/blog"
                   >
-                    Projects
+                    Blog
                   </Link>
                 </Nav.Link>
                 <Nav.Link>

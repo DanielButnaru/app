@@ -1,17 +1,14 @@
 import React, { Component, Fragment } from "react";
 import { TopBanner } from "../components/TopBanner/TopBanner";
-import { Services } from "../components/Services/Services";
+import { Services } from "../components/HomeComponents/Services/Services";
+
 import { TopNavigation } from "../components/TopNavigation/TopNavigation";
-import { Analysis } from "../components/Analysis/Analysis";
-import { Summary } from "../components/Summary/Summary";
-import { RecentProject } from "../components/RecentProject/RecentProject";
-import { Projects } from "../components/Projects/Projects";
-import { Video } from "../components/Video/Video";
-import { ClientReview } from "../components/ClientReview/ClientReview";
-import { AboutMe } from "../components/AboutMe/AboutMe";
+import { RecentProject } from "../components/HomeComponents/RecentProject/RecentProject";
 import { Footer } from "../components/Footer/Footer";
-import {Features} from "../components/Features/Features"
-import ImageSlider from "../components/ImageSlider/ImageSlider";
+import {Features} from "../components/HomeComponents/Features/Features"
+import {ImageSlider} from "../components/HomeComponents/ImageSlider/ImageSlider";
+import {ContactUs} from "../components/HomeComponents/ContactUs/ContactUs";
+import {Newsletter} from "../components/HomeComponents/Newsletter/Newsletter";
 
 export class HomePage extends Component {
   componentDidMount(){
@@ -27,12 +24,8 @@ export class HomePage extends Component {
         <RecentProject />
         <Features />
         <ImageSlider/>
-       
-        {/* <Analysis /> */}
-        {/* <Summary /> */}
-        {/* <Projects /> */}
-        <Video />
-        <ClientReview />
+        <ContactUs/>
+        <Newsletter/>
         <Footer />
       </Fragment>
     );

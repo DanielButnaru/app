@@ -2,12 +2,12 @@ import React, { Component, Fragment } from "react";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Maps from "../../assets/maps.svg"
-import Exercise from "../../assets/exercise.svg"
-import Visibility from "../../assets/visibility.svg"
-import Image_1 from "../../assets/images/hero/image-1.jpg"
-import Image_2 from "../../assets/images/hero/snow-1.jpg"
-import Image_3 from "../../assets/images/hero/walking-v1.jpg"
+import Maps from "../../../assets/maps.svg"
+import Exercise from "../../../assets/exercise.svg"
+import Visibility from "../../../assets/visibility.svg"
+import Image_1 from "../../../assets/images/hero/image-1.jpg"
+import Image_2 from "../../../assets/images/hero/snow-1.jpg"
+import Image_3 from "../../../assets/images/hero/walking-v1.jpg"
 
 import { keyframes } from "@emotion/react";
 import { Reveal } from "react-awesome-reveal";

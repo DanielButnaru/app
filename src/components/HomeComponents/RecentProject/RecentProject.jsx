@@ -2,9 +2,9 @@ import React, { Component, Fragment } from "react";
 import { Col, Container, Row, Card, Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import walkingHolidays from "../../assets/images/hero/walking-v1.jpg";
-import hiking from "../../assets/images/hero/hiking-v1.jpg";
-import snow from "../../assets/images/hero/snow-1.jpg";
+import walkingHolidays from "../../../assets/images/hero/walking-v1.jpg";
+import hiking from "../../../assets/images/hero/hiking-v1.jpg";
+import snow from "../../../assets/images/hero/snow-1.jpg";
 import { Link } from "react-router-dom";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 
